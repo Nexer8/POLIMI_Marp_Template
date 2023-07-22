@@ -1,0 +1,55 @@
+/* @theme polimi */
+
+@import 'default';
+
+section {
+  background-color: #fff;
+  color: #000;
+  background-image: url('../slides/images/POLIMI_logo_blue.svg');
+  background-repeat: no-repeat;
+  background-position: right 40px top 40px;
+  background-size: 20%;
+}
+
+section.lead {
+  background-image: url('../slides/images/POLIMI_rettorato_blue.svg');
+  background-position: right 100px bottom 100px;
+  background-size: 50%;
+}
+
+section h1,
+section a,
+section footer,
+section::after {
+  color: #172b50;
+}
+
+section a {
+  text-decoration: underline;
+}
+
+section.invert {
+  background-color: #172b50;
+  color: #fff;
+  background-image: url('../slides/images/POLIMI_logo_white.svg');
+}
+
+section.lead.invert {
+  background-image: url('../slides/images/POLIMI_rettorato_white.svg');
+}
+
+section.invert h1,
+section.invert footer,
+section.invert::after {
+  color: #fff;
+}
+
+section.invert a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Add "Page" prefix and total page number */
+section::after {
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+}
